@@ -4,11 +4,11 @@ kwriteconfig5 --file "kwalletrc" --group "Wallet" --key "Enabled" false
 kwriteconfig5 --file "kscreenlockerrc" --group "Daemon" --key "Autolock" false
 kwriteconfig5 --file "kscreenlockerrc" --group "Daemon" --key "LockOnResume" false
 kwriteconfig5 --file "kcminputrc" --group "Keyboard" --key "NumLock" 0
-kwriteconfig5 --file "konsolerc" --group TabBar --key NewTabButton true
-kwriteconfig5 --file "konsolerc" --group TabBar --key TabBarVisibility AlwaysShowTabBar
-kwriteconfig5 --file "konsolerc" --group ThumbnailsSettings --key EnableThumbnails false
-kwriteconfig5 --file "konsolerc" --group "Desktop Entry" --key DefaultProfile JC.profile
-kwriteconfig5 --file "konsolerc" --group MainWindow --key RestorePositionForNextInstance false
+kwriteconfig6 --file "konsolerc" --group TabBar --key NewTabButton true
+kwriteconfig6 --file "konsolerc" --group TabBar --key TabBarVisibility AlwaysShowTabBar
+kwriteconfig6 --file "konsolerc" --group ThumbnailsSettings --key EnableThumbnails false
+kwriteconfig6 --file "konsolerc" --group "Desktop Entry" --key DefaultProfile JC.profile
+kwriteconfig6 --file "konsolerc" --group MainWindow --key RestorePositionForNextInstance false
 kwriteconfig5 --file "dolphinrc" --group ContentDisplay --key UseShortRelativeDates false
 kwriteconfig5 --file "dolphinrc" --group DetailsMode --key PreviewSize 16
 kwriteconfig5 --file "dolphinrc" --group General --key ShowZoomSlider false
@@ -24,6 +24,9 @@ kwriteconfig5 --file "kwinrc" --group Desktops --key Rows 2
 kwriteconfig5 --file "/home/john/.local/share/dolphin/view_properties/global/.directory" --group "Dolphin" --key "PreviewsShown" false
 kwriteconfig5 --file "/home/john/.local/share/dolphin/view_properties/global/.directory" --group "Dolphin" --key "ViewMode" 1
 kwriteconfig6 --file "powerdevilrc" --group AC --group SuspendAndShutdown --key AutoSuspendAction 0
+kwriteconfig6 --file "kscreenlockerrc" --group Daemon --key Autolock false
+kwriteconfig6 --file "kscreenlockerrc" --group Daemon --key LockOnResume false
+kwriteconfig6 --file "kscreenlockerrc" --group Daemon --key Timeout 0
 touch /home/john/.config/kcmaudiocd_encoder_lame_rc
 touch /home/john/.config/kcmaudiocd_encoder_vorbis_rc
 kwriteconfig5 --file "/home/john/.config/kcmaudiocd_encoder_lame_rc" --group Lame --key bitrate_constant true
