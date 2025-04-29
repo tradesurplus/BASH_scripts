@@ -1,8 +1,6 @@
 #!/bin/bash
 
 kwriteconfig5 --file "kwalletrc" --group "Wallet" --key "Enabled" false
-kwriteconfig5 --file "kscreenlockerrc" --group "Daemon" --key "Autolock" false
-kwriteconfig5 --file "kscreenlockerrc" --group "Daemon" --key "LockOnResume" false
 kwriteconfig5 --file "kcminputrc" --group "Keyboard" --key "NumLock" 0
 kwriteconfig6 --file "konsolerc" --group TabBar --key NewTabButton true
 kwriteconfig6 --file "konsolerc" --group TabBar --key TabBarVisibility AlwaysShowTabBar
@@ -49,8 +47,11 @@ for i in "${!arr_appletsrc[@]}"; do
     fi
 done
 
-kwriteconfig5 --file $APPLETSRC --group Containments --group $clock_containment --group Applets --group $clock_applet --group Configuration --group Appearance --key dateFormat isoDate
-kwriteconfig5 --file $APPLETSRC --group Containments --group $clock_containment --group Applets --group $clock_applet --group Configuration --group Appearance --key use24hFormat 2
-kwriteconfig5 --file $APPLETSRC --group Containments --group $switcher_containment --group Applets --group $switcher_applet --group Configuration --group General --key showOnlyCurrentActivity false
-kwriteconfig5 --file $APPLETSRC --group Containments --group $switcher_containment --group Applets --group $switcher_applet --group Configuration --group General --key showOnlyCurrentDesktop false
-kwriteconfig5 --file $APPLETSRC --group Containments --group $switcher_containment --group Applets --group $switcher_applet --group Configuration --group General --key indicateAudioStreams false
+kwriteconfig6 --file $APPLETSRC --group Containments --group $clock_containment --group Applets --group $clock_applet --group Configuration --group Appearance --key dateFormat isoDate
+kwriteconfig6 --file $APPLETSRC --group Containments --group $clock_containment --group Applets --group $clock_applet --group Configuration --group Appearance --key use24hFormat 2
+kwriteconfig6 --file $APPLETSRC --group Containments --group $switcher_containment --group Applets --group $switcher_applet --group Configuration --group General --key showOnlyCurrentActivity false
+kwriteconfig6 --file $APPLETSRC --group Containments --group $switcher_containment --group Applets --group $switcher_applet --group Configuration --group General --key showOnlyCurrentDesktop false
+kwriteconfig6 --file $APPLETSRC --group Containments --group $switcher_containment --group Applets --group $switcher_applet --group Configuration --group General --key indicateAudioStreams false
+
+## Change config for Kickoff. Seems to have constant Containments/Applets numbers.
+kwriteconfig6 --file $APPLETSRC --group Containments --group 2 --group Applets --group 3 --group Configuration --group General --key switchCategoryOnHover true
