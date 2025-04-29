@@ -27,10 +27,11 @@ kwriteconfig6 --file "kscreenlockerrc" --group Daemon --key LockOnResume false
 kwriteconfig6 --file "kscreenlockerrc" --group Daemon --key Timeout 0
 touch /home/john/.config/kcmaudiocd_encoder_lame_rc
 touch /home/john/.config/kcmaudiocd_encoder_vorbis_rc
-kwriteconfig5 --file "/home/john/.config/kcmaudiocd_encoder_lame_rc" --group Lame --key bitrate_constant true
-kwriteconfig5 --file "/home/john/.config/kcmaudiocd_encoder_lame_rc" --group Lame --key bitrate_variable false
-kwriteconfig5 --file "/home/john/.config/kcmaudiocd_encoder_lame_rc" --group Lame --key cbr_bitrate 12
-kwriteconfig5 --file "/home/john/.config/kcmaudiocd_encoder_vorbis_rc" --group Vorbis --key vorbis_quality 6
+kwriteconfig6 --file "/home/john/.config/kcmaudiocd_encoder_lame_rc" --group Lame --key bitrate_constant true
+kwriteconfig6 --file "/home/john/.config/kcmaudiocd_encoder_lame_rc" --group Lame --key bitrate_variable false
+kwriteconfig6 --file "/home/john/.config/kcmaudiocd_encoder_lame_rc" --group Lame --key cbr_bitrate 12
+kwriteconfig6 --file "/home/john/.config/kcmaudiocd_encoder_vorbis_rc" --group Vorbis --key vorbis_enc_method 1
+kwriteconfig6 --file "/home/john/.config/kcmaudiocd_encoder_vorbis_rc" --group Vorbis --key vorbis_quality 6
 
 APPLETSRC="/home/john/.config/plasma-org.kde.plasma.desktop-appletsrc"
 
