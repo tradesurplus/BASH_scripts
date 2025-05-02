@@ -25,6 +25,8 @@ kwriteconfig6 --file "powerdevilrc" --group AC --group SuspendAndShutdown --key 
 kwriteconfig6 --file "kscreenlockerrc" --group Daemon --key Autolock false
 kwriteconfig6 --file "kscreenlockerrc" --group Daemon --key LockOnResume false
 kwriteconfig6 --file "kscreenlockerrc" --group Daemon --key Timeout 0
+kwriteconfig6 --file "mimeapps.list" --group "Added Associations" --key "video/mp4" "vlc.desktop;fr.handbrake.ghb.desktop;"
+kwriteconfig6 --file "mimeapps.list" --group "Default Applications" --key "video/mp4" "vlc.desktop;"
 touch /home/john/.config/kcmaudiocd_encoder_lame_rc
 touch /home/john/.config/kcmaudiocd_encoder_vorbis_rc
 kwriteconfig6 --file "/home/john/.config/kcmaudiocd_encoder_lame_rc" --group Lame --key bitrate_constant true
